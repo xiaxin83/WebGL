@@ -3,7 +3,7 @@
  */
 const VSHADER_SOURCE =
   "void main() {\n" +
-  "  gl_Position = vec4(0.0, 0.0, 0.0, 1.0);\n" + // Set the vertex coordinates of the point
+  "  gl_Position = vec4(0.5, 0.5, 0.0, 1.0);\n" + // Set the vertex coordinates of the point
   "  gl_PointSize = 10.0;\n" + // Set the point size
   "}\n";
   /**
@@ -31,5 +31,6 @@ const FSHADER_SOURCE =
 
   gl.clear(gl.COLOR_BUFFER_BIT);
   // Draw a point
-  gl.drawArrays(gl.POINTS, 0, 1);
+    gl.drawArrays(gl.POINTS, 0, 1);
+    
 })();
