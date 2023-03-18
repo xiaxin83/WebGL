@@ -69,7 +69,7 @@ function click(ev, gl, canvas, a_Position, u_FragColor) {
     const rgba = g_color[i]
     gl.vertexAttrib3f(a_Position, xy[0], xy[1], 0.0);
     gl.uniform4f(u_FragColor, rgba[0], rgba[1], rgba[2], rgba[3])
-    gl.drawArrays(gl.POINTS, 0, 1)
+    gl.drawArrays(gl.POINTS, 0, 2)
   }
 }
 main()
