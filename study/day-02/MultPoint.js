@@ -52,12 +52,15 @@ function initVertexBuffers(gl) {
   ])
   const n = 3;
 
+  // 创建缓冲区对象
   const vertexBuffer = gl.createBuffer();
   if (!vertexBuffer) {
     console.log('Failed to create the buffer object');
     return -1
   }
+  // 绑定缓冲区对象
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+  // 将数据写入缓冲区对象
   gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
 
   // Get the storage location of a_Position
@@ -66,9 +69,9 @@ function initVertexBuffers(gl) {
     console.log("Failed to get the storage location of a_Position");
     return;
   }
-
+  // 将缓冲区对象分配给一个attribute变量
   gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0)
-
+  // 开启attribute变量
   gl.enableVertexAttribArray(a_Position)
 
   return n
