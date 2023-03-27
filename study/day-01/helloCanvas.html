@@ -1,19 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../utils/webgl-utils.js"></script>
-    <script src="../utils/webgl-debug.js"></script>
-    <script src="../utils//cuon-utils.js"></script>
- 
 </head>
+
 <body>
-    <canvas id="webgl" width="400" height="400" >
-        Please use a browser that supports "canvas"
-    </canvas>
-     <script src="./HelloPoint1.js"></script>
+    <div class="container">
+        <div class="header">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="Rotation w">
+            <!-- <div class="left"> ← </div>
+            <div class="right"> → </div> -->
+        </div>
+        <div class="gamelist w">
+            <div class="gamelist-header">
+                <span class="left"></span>
+                <span class="right"></span>
+            </div>
+            <div class="gamelist-container">
+                <div style="height: 230px; width: 333px; background-color: #fff;"></div>
+                <div style="height: 230px; width: 333px; background-color: #fff;"></div>
+                <div style="height: 230px; width: 333px; background-color: #fff;"></div>
+            </div>
+        </div>
+        <div style="margin-top: 30px;" />
+    </div>
 </body>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        background-color: black;
+    }
+
+    .header .left {
+        margin-left: 10px;
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+    }
+
+    .header .right {
+        margin-right: 10px;
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #ccc;
+        overflow-y: auto;
+    }
+
+    .w {
+        width: 1030px;
+    }
+
+    .Rotation {
+        position: relative;
+        margin: 0 auto;
+        height: 400px;
+        /* transform: translate(-50%);
+        left: 50%; */
+        background-color: skyblue;
+    }
+
+    .Rotation .left {
+        width: 40px;
+        height: 40px;
+        background-color: gray;
+        line-height: 40px;
+        left: 20px;
+    }
+
+    .Rotation .right {
+        width: 40px;
+        height: 40px;
+        right: 0;
+        background-color: gray;
+        line-height: 40px;
+    }
+
+    .container .gamelist {
+        margin: 40px auto 0;
+        height: 300px;
+        /* background-color: plum; */
+    }
+
+    .gamelist .gamelist-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .gamelist .gamelist-header .left {
+        display: inline-block;
+        margin-left: 10px;
+        width: 100px;
+        height: 30px;
+        background-color: brown;
+    }
+
+    .gamelist .gamelist-header .right {
+        display: inline-block;
+        margin-right: 10px;
+        width: 100px;
+        height: 30px;
+        background-color: brown;
+    }
+
+    .gamelist .gamelist-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+        height: 230px;
+        /* background-color: cadetblue; */
+    }
+</style>
+
 </html>
